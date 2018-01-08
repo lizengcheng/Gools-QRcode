@@ -16,8 +16,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:text="商品码："
             android:textColor="#000000"
@@ -25,11 +24,10 @@
             android:gravity="center"/>
 
         <TextView
-            android:id="@+id/tv_result"
-            android:hint="请输入商品码"
+
+            android:id="@+id/tv_goodscode"
             android:textSize="18sp"
-            android:layout_width="wrap_content"
-            android:layout_weight="6"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
     <LinearLayout
@@ -38,8 +36,27 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:text="商品名："
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:gravity="center"/>
+
+        <TextView
+
+            android:id="@+id/tv_goodname"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:text="价格："
             android:textColor="#000000"
@@ -50,9 +67,28 @@
 
             android:id="@+id/tv_goodsprize"
             android:textSize="18sp"
-            android:layout_width="wrap_content"
-            android:layout_weight="4"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:text="备注："
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_goodmark"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
 
 </LinearLayout>

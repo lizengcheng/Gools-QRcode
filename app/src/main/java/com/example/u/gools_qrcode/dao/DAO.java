@@ -29,6 +29,16 @@ public class DAO {
                 tb_goods.getGoodsId(),
                 tb_goods.getMark()});
     }
+    public  Tb_goods find(Long goodsId) {
+        db = helper.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select * from goods where goodsId = ?", new String[] { String.valueOf(goodsId) });
+        if (cursor.moveToNext()) {
+            return new Tb_goods(cursor.getInt(cursor.getColumnIndex("_id")), cursor.getString(cursor.getColumnIndex("name")), cursor.getDouble(cursor
+                    .getColumnIndex("prize")), cursor.getString(cursor.getColumnIndex("goodsId")),
+                    cursor.getString(cursor.getColumnIndex("mark")));
+        }
+        return null;
+    }
     public List<Tb_goods> getScrollData(int start, int count) {
         List<Tb_goods> tb_inaccount = new ArrayList<Tb_goods>();
         db = helper.getWritableDatabase();

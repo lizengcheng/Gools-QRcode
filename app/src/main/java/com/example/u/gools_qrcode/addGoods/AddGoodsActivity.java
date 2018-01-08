@@ -78,11 +78,13 @@ public class AddGoodsActivity extends AppCompatActivity {
             if (requestCode == REQ_CODE) {
                 image.setVisibility(View.GONE);
                 goodscode.setVisibility(View.VISIBLE);
-
-                String result = data.getStringExtra(CaptureActivity.SCAN_QRCODE_RESULT);
-
-                goodscode.setText(result);
-                showToast("扫码结果：" + result);
+                try {
+                    String result = data.getStringExtra(CaptureActivity.SCAN_QRCODE_RESULT);
+                    goodscode.setText(result);
+                    showToast("扫码结果：" + result);
+                }catch (Exception e){
+                    showToast("手动添加" );
+                }
             }
         }
 
